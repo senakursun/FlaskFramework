@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ana Sayfa</title>
+    <style>
+        /* Orta kısma yerleştirmek için bir CSS kullanalım */
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh; /* Orta yükseklikte görsel */
+        }
+        .button-container {
+            text-align: center; /* Butonu yatay olarak merkezlemek için */
+            margin-top: 20px; /* Resmin altına biraz boşluk bırakmak için */
+        }
+    </style>
+</head>
+<body>
+    <h1>Flask Uygulaması</h1>
+    <h3>İsim: Sena Nur</h3>
+    <h3>Soyisim: KURŞUN</h3>
+    <h3>Öğrenci Numarası: 211213031</h3>
+
+    <!-- Orta kısma yerleştirelim -->
+    <div class="center">
+        <!-- Yeni resmi burada göstereceğiz -->
+        <img src="{{ url_for('static', filename=image_filename) }}" alt="Rastgele Koordinatların Görselleştirilmesi">
+    </div>
+
+    <!-- Butonu resmin altına yerleştirelim -->
+    <div class="button-container">
+        <!-- Butonu form olmadan direkt olarak göndereceğiz -->
+        <button onclick="window.location.href='/generate'">Yeni Görsel Oluştur</button>
+    </div>
+</body>
+</html>
